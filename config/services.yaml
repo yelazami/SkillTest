@@ -15,17 +15,3 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/'
-
-    App\Users\Infrastructure\Controller\:
-        resource: '../src/Users/Infrastructure/Controller/'
-        tags: [ 'controller.service_arguments' ]
-
-
-
-    App\Core\EventListener\ExceptionListener:
-        tags:
-            - { name: kernel.event_listener, event: kernel.exception }
-
-#    App\Core\EventListener\BuiltInEventsSubscriber:
-#        tags:
-#            - { name: kernel.event_subscriber }
