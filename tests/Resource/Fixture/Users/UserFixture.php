@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Tests\Resource\Fixture;
+namespace App\Tests\Resource\Fixture\Users;
 
 use App\Tests\Tools\FakerTools;
 use App\Users\Domain\Factory\UserFactory;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+
 
 class UserFixture extends Fixture
 {

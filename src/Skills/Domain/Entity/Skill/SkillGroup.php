@@ -7,9 +7,6 @@ namespace App\Skills\Domain\Entity\Skill;
 use App\Shared\Domain\Service\UlidService;
 use App\Skills\Domain\Specification\SkillGroupNameSpecification;
 
-/**
- * Группа навыков.
- */
 class SkillGroup
 {
     private string $id;
