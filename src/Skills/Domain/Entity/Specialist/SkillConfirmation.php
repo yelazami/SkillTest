@@ -35,7 +35,6 @@ class SkillConfirmation
 
     public function addProof(Proof $proof): void
     {
-        // Не добавляем док-во подвтерждения, если док-во с таким же тестом было добавлено ранее
         foreach ($this->proofs as $exProof) {
             if ($exProof->getTestId() === $proof->getTestId()) {
                 break;

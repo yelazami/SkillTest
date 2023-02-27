@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Users\Infrastructure\Controller;
 
-use App\Shared\Damain\Security\UserFetcherInterface;
+use App\Shared\Domain\Security\UserFetcherInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -15,12 +15,12 @@ class GetMeAction
     {
     }
 
-    public function __invoke()
+    public function __invoke(): JsonResponse
     {
         $user = $this->userFetcher->getAuthUser();
 
         return new JsonResponse([
-            'ulid' => $user->getUlid(),
+            'ulid' => $user->getId(),
             'email' => $user->getEmail(),
         ]);
     }

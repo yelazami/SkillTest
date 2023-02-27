@@ -33,7 +33,17 @@ services:
         resource: '../src/Users/Infrastructure/Controller/'
         tags: [ 'controller.service_arguments' ]
 
+
     App\Shared\Infrastructure\Doctrine\DomainEventSubscriber:
         tags: [ { name: 'doctrine.event_subscriber' } ]
         arguments:
             $containerBag: '@service_container'
+
+
+    App\Core\EventListener\ExceptionListener:
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
+
+#    App\Core\EventListener\BuiltInEventsSubscriber:
+#        tags:
+#            - { name: kernel.event_subscriber }
