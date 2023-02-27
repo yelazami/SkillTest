@@ -8,19 +8,10 @@ use App\Shared\Domain\Service\AssertService;
 use App\Shared\Domain\Service\UlidService;
 use App\Skills\Domain\Specification\Skill\SkillSpecification;
 
-/**
- * Навык.
- */
 class Skill
 {
-    /**
-     * Минимальная длина названия навыка.
-     */
     public const NAME_MIN_LENGTH = 2;
 
-    /**
-     * Максимальная длина названия навыка.
-     */
     public const NAME_MAX_LENGTH = 100;
 
     private string $id;
@@ -48,7 +39,7 @@ class Skill
             $name,
             self::NAME_MIN_LENGTH,
             self::NAME_MAX_LENGTH,
-            'Название навыка должно быть не менее 3 и не более 100 символов'
+            'Do not add a confirmation with the same test has been added before'
         );
 
         $this->name = $name;

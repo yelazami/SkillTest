@@ -12,9 +12,6 @@ use App\Skills\Domain\Specification\Speciality\SpecialitySpecification;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
-/**
- * Специальность.
- */
 class Speciality
 {
     private string $id;
@@ -66,9 +63,6 @@ class Speciality
         return $this;
     }
 
-    /**
-     * Опубликовать.
-     */
     public function publish(): void
     {
         AssertService::greaterThanEq($this->skills->count(), 1, 'В специальности должен быть минимум 1 навык');

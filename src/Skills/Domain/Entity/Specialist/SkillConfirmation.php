@@ -9,9 +9,7 @@ use App\Skills\Domain\Entity\Skill\Skill;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
-/**
- * Подтверждение навыка.
- */
+
 class SkillConfirmation
 {
     private string $id;
