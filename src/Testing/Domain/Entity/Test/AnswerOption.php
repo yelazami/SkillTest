@@ -14,9 +14,7 @@ class AnswerOption
 
     private string $description;
 
-    /**
-     * Is the answer correct?
-     */
+
     private bool $isCorrect;
 
     public function __construct(Question $question, string $description, bool $isCorrect)

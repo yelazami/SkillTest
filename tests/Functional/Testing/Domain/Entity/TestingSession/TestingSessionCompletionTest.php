@@ -16,7 +16,6 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 class TestingSessionCompletionTest extends WebTestCase
 {
     /**
-     * 
      *
      * @dataProvider myDataProvider
      */

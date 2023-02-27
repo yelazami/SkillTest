@@ -47,7 +47,7 @@ class TestingSession extends Aggregate
 
     public function complete(): void
     {
-        AssertService::null($this->completedAt, 'Test completed.');
+        AssertService::null($this->completedAt, 'Тест уже завершен.');
 
         $this->completedAt = new DateTimeImmutable();
 
@@ -78,7 +78,7 @@ class TestingSession extends Aggregate
         foreach ($this->userAnswers as $a) {
             AssertService::true(
                 $a->getQuestion()->getId() !== $answer->getQuestion()->getId(),
-                'incorrect answer id'
+                'Ответ уже добавлен'
             );
         }
 

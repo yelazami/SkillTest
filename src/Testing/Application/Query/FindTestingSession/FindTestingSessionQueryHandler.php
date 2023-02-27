@@ -1,4 +1,3 @@
-
 <?php
 
 namespace App\Testing\Application\Query\FindTestingSession;
